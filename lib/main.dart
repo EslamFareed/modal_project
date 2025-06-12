@@ -5,9 +5,11 @@ import 'package:modal_project/cubits/login_cubit/login_cubit.dart';
 import 'package:modal_project/views/admin/admins/cubit/admins_cubit.dart';
 import 'package:modal_project/views/admin/buildings/cubit/buildings_cubit.dart';
 import 'package:modal_project/views/admin/courses/cubit/courses_cubit.dart';
+import 'package:modal_project/views/admin/students/cubit/students_cubit.dart';
 import 'package:modal_project/views/splash_screen.dart';
 import 'core/cache_helper.dart';
 import 'firebase_options.dart';
+import 'views/admin/instructors/cubit/instructors_cubit.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,10 +29,26 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => AdminsCubit()),
         BlocProvider(create: (context) => CoursesCubit()),
         BlocProvider(create: (context) => BuildingsCubit()),
+        BlocProvider(create: (context) => StudentsCubit()),
+        BlocProvider(create: (context) => InstructorsCubit()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         home: SplashScreen(),
+        theme: ThemeData.light().copyWith(
+          scaffoldBackgroundColor: Colors.white,
+          appBarTheme: AppBarTheme(
+            backgroundColor: Colors.white,
+            foregroundColor: Colors.black,
+            elevation: 8,
+            centerTitle: true,
+            titleTextStyle: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
+          ),
+        ),
       ),
     );
   }

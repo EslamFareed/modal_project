@@ -36,7 +36,7 @@ class SplashScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Icon(Icons.menu_book, size: 200),
+            Image.asset("assets/images/icon.png", width: 200, height: 200),
             CircularProgressIndicator(),
           ],
         ),

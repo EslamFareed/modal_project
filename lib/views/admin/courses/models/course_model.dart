@@ -12,4 +12,14 @@ class CourseModel {
     name = e.data()["name"];
     code = e.data()["code"];
   }
+
+  CourseModel.fromMap(String id, Map<String, dynamic> data) {
+    this.id = id;
+    name = data["name"];
+    code = data["code"];
+  }
+
+  Map<String, dynamic> toMap() {
+    return {"name": name, "code": code};
+  }
 }

@@ -27,10 +27,8 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: context.screenHeight * .05),
-                Text(
-                  "Login",
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-                ),
+                Image.asset("assets/images/icon.png", width: 200, height: 200),
+
                 SizedBox(height: context.screenHeight * .05),
 
                 //! ------------------- Email ------------------!
