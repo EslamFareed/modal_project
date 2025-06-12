@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:modal_project/cubits/login_cubit/login_cubit.dart';
+import 'package:modal_project/views/admin/admins/cubit/admins_cubit.dart';
+import 'package:modal_project/views/admin/buildings/cubit/buildings_cubit.dart';
+import 'package:modal_project/views/admin/courses/cubit/courses_cubit.dart';
 import 'package:modal_project/views/splash_screen.dart';
 import 'core/cache_helper.dart';
 import 'firebase_options.dart';
@@ -19,7 +22,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [BlocProvider(create: (context) => LoginCubit())],
+      providers: [
+        BlocProvider(create: (context) => LoginCubit()),
+        BlocProvider(create: (context) => AdminsCubit()),
+        BlocProvider(create: (context) => CoursesCubit()),
+        BlocProvider(create: (context) => BuildingsCubit()),
+      ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         home: SplashScreen(),
