@@ -12,3 +12,12 @@ class SuccessAssignmentsState extends AssignmentsState {}
 class ErrorAssignmentsState extends AssignmentsState {}
 
 class SuccessAssignmentCoursesState extends AssignmentsState {}
+
+
+
+
+class LoadingSendAnswerState extends AssignmentsState {}
+
+class SuccessSendAnswerState extends AssignmentsState {}
+
+class ErrorSendAnswerState extends AssignmentsState {}

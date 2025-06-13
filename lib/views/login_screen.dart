@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_project/core/app_functions.dart';
 import 'package:modal_project/views/admin/admin_home_screen.dart';
 import 'package:modal_project/views/instructor/instructor_home_screen.dart';
+import 'package:modal_project/views/student/register/register_screen.dart';
 import 'package:modal_project/views/student/student_home_screen.dart';
 import '../../../core/app_text_field.dart';
 import '../cubits/login_cubit/login_cubit.dart';
@@ -142,12 +143,12 @@ class LoginScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const Text(
-                          "Don't have an account? ",
+                          "You are A Student and Don't have an account? ",
                           style: TextStyle(color: Colors.white),
                         ),
                         InkWell(
                           onTap: () {
-                            // context.goToPage(SignUpScreen());
+                            context.goToPage(RegisterScreen());
                           },
                           child: const Text(
                             "Sign up",

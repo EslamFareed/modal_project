@@ -8,6 +8,7 @@ class AssignmentModel {
   Map<String, StudentAnswer>? answers;
   Map<String, CourseAssignmentModel>? course;
   String? id;
+  bool isAnswered = false;
 
   AssignmentModel({
     this.file,

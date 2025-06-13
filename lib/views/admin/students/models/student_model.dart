@@ -38,6 +38,23 @@ class StudentModel {
     }
   }
 
+  StudentModel.fromDoc(DocumentSnapshot<Map<String, dynamic>> e) {
+    id = e.id;
+    idNumber = e.data()!["id"];
+    name = e.data()!["name"];
+    email = e.data()!["email"];
+    phone = e.data()!["phone"];
+    password = e.data()!["password"];
+
+    if (e.data()!["courses"] != null) {
+      courses = {};
+      Map<String, dynamic> coursesMap = e.data()!["courses"];
+      coursesMap.forEach((key, value) {
+        courses![key] = CourseModel.fromMap(key, value);
+      });
+    }
+  }
+
   Map<String, dynamic> toMap() {
     return {
       "id": idNumber,
