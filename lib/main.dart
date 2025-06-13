@@ -6,6 +6,7 @@ import 'package:modal_project/views/admin/admins/cubit/admins_cubit.dart';
 import 'package:modal_project/views/admin/buildings/cubit/buildings_cubit.dart';
 import 'package:modal_project/views/admin/courses/cubit/courses_cubit.dart';
 import 'package:modal_project/views/admin/students/cubit/students_cubit.dart';
+import 'package:modal_project/views/instructor/assignments/cubit/assignments_cubit.dart';
 import 'package:modal_project/views/splash_screen.dart';
 import 'core/cache_helper.dart';
 import 'firebase_options.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => BuildingsCubit()),
         BlocProvider(create: (context) => StudentsCubit()),
         BlocProvider(create: (context) => InstructorsCubit()),
+        BlocProvider(create: (context) => AssignmentsCubit()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
