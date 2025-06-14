@@ -138,7 +138,7 @@ class AssignmentsScreen extends StatelessWidget {
 
   void _launchUrl(Uri url) async {
     // Use url_launcher package
-    if (!await canLaunchUrl(url)) return;
-    await launchUrl(url, mode: LaunchMode.externalApplication);
+    // if (!await canLaunchUrl(url)) return;
+    await launchUrl(url);
   }
 }
